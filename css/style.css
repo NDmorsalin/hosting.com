@@ -53,6 +53,7 @@
     margin: 1rem 0 2rem 0;
     background-color: var(--whit-color);
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .description {
@@ -106,7 +107,6 @@
 
 .nav_container.toggle {
     top: 100%;
-
 }
 
 .nav_link {
@@ -127,6 +127,13 @@
 
 
 /* ===== hero start ====*/
+.hero_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    place-items: center;
+}
 .hero_section {
     background-color: var(--primary-color);
     color: var(--whit-color);
@@ -145,6 +152,15 @@
     color: var(--hover-color);
 }
 
+.hero_img{
+    display: none;
+}
+.hero_img img{
+   width: 100%;
+   height: 100%;
+    display: block;
+}
+
 /* ===== hero end ====*/
 
 
@@ -157,7 +173,7 @@
 }
 
 .whatnew_img {
-    min-width: 100%;
+    max-width: 400px;
     width: 100%;
 }
 
@@ -193,8 +209,8 @@
 .card_container {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+    grid-gap: 1.5rem;
 }
 
 .card {
@@ -202,6 +218,7 @@
     padding: 2rem;
     box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
     border-radius: 25px;
+
 }
 
 .card_img {
@@ -215,55 +232,63 @@
 .card_title {
     padding: .8rem 0 1rem 0;
 }
-.service_btn{
+
+.service_btn {
     margin: 2rem 0;
 }
+
 /* ===== service_section end ====*/
 
 
 /* ===== css start ====*/
-.choose_section{
+.choose_section {
     text-align: center;
 }
 
-.choose_title{
+.choose_title {
     padding-bottom: 0;
 }
-.choose_section_subtitle{
+
+.choose_section_subtitle {
     color: #1c1c1d;
 }
 
-.choose_card{
+.choose_card {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
-.choose_btn{
+.choose_btn {
     background-color: var(--primary-color);
     color: var(--whit-color);
     text-align: center;
 }
+
 /* ===== choose end ====*/
 
 
 /* ===== form start ====*/
 
-.form_section{
+.form_section {
     background-color: var(--primary-color);
     color: var(--whit-color);
     text-align: center;
 }
-input,textarea{
-   display: block;
-   padding:.5rem 1rem;
-   margin: 1rem 0;
+
+input,
+textarea {
+    display: block;
+    padding: .5rem 1rem;
+    margin: 1rem 0;
 }
 
-input[type=text],input[type=email],textarea{
+input[type=text],
+input[type=email],
+textarea {
     border-radius: .5rem;
-width: 100%;
+    width: 100%;
 }
 
-input[type=submit]{
+input[type=submit] {
     color: var(--sent-btn-color);
     padding: .5rem 2rem;
     border-radius: 2rem;
@@ -271,7 +296,8 @@ input[type=submit]{
     outline: none;
     margin: 2rem auto;
 }
-.frm-des{
+
+.frm-des {
     padding: 1rem 0;
 }
 
@@ -279,7 +305,58 @@ input[type=submit]{
 
 /* footer */
 
-.footer{
+.footer {
     text-align: center;
     padding: 1rem 0;
+}
+
+@media screen and (min-width:768px) {
+
+    .container {
+        width: 80%;
+       
+    }
+    .nav_toggle {
+        display: none;
+    }
+
+
+    .nav_container {
+        position: relative;
+        top: 0;
+        background-color: var(--primary-color);
+        transition: 1s;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav_container.toggle {
+        top: 0;
+    }
+
+    .nav_link {
+        color: var(--whit-color);
+        padding: 1rem;
+    }
+    .hero_container{
+      
+        grid-template-columns: 1fr 1fr;
+       
+    }
+   
+    .hero_img{
+        display: block;
+    }
+.choose_container{
+    padding-bottom: 150px;
+}
+    .form{
+        margin-top: ;
+        margin: -140px auto 0 auto;
+        width: 400px;
+        background-color: var(--primary-color);
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        border-radius: 2rem;
+    }
 }
