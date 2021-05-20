@@ -68,9 +68,14 @@
 .header_section {
     background-color: var(--primary-color);
     position: relative;
+    top: 0;
+    left: 0;
     z-index: 1;
 }
-
+.header_section.sticky{
+    position: sticky;
+    box-shadow: 0 1px 20px rgba(255,255,255,.5), 0 1px 20px rgba(0,0,0,.8);
+}
 .header_container {
     background-color: var(--primary-color);
     display: flex;
@@ -121,6 +126,7 @@
     background-color: var(--hover-bg-color);
     color: var(--hover-color);
 }
+
 
 /* ===== nav end ====*/
 
