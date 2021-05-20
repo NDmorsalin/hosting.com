@@ -18,7 +18,9 @@
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
     --primary-color: #0C0F38;
     --hover-color: #ffe100;
