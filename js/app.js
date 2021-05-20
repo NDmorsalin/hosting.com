@@ -1,5 +1,16 @@
 const nav_toggle = document.querySelector('.nav_toggle')
+
 const nav_container = document.querySelector('.nav_container')
+
+const header_section = document.querySelector('.header_section');
+console.dir(header_section);
+window.addEventListener('scroll', function(e){
+   if( window.scrollY >= 150){
+    header_section.classList.add('sticky');
+   }else{
+    header_section.classList.remove('sticky');
+   }
+})
 
 nav_toggle.addEventListener('click', function(e){
     nav_container.classList.toggle('toggle');
